@@ -10,5 +10,3 @@ if current_version[-1] >= 10:
         current_version[-3] += 1
 
 print(".".join(map(str, current_version)))
-
-
