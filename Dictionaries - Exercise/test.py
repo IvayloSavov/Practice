@@ -1,16 +1,5 @@
-# Python program to demonstrate
-# default_factory argument of
-# defaultdict
+def test() :
+    pass
 
-
-from collections import defaultdict
-
-# Defining the dict and passing
-# lambda as default_factory argument
-d = defaultdict(int)
-d["a"] = 1
-d["b"] = 2
-
-print(d["a"])
-print(d["b"])
-print(d["c"])
+res = test()
+print(res)
