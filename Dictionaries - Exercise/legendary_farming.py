@@ -28,7 +28,11 @@ def read_items():
 def separate_items():
     inputs = read_items().split()
     junk = defaultdict(int)
-    key_materials = defaultdict(int)
+    key_materials = {
+        "shards": 0,
+        "motes": 0,
+        "fragments": 0,
+    }
 
     for i in range(0, len(inputs), 2):
         quantity, material = int(inputs[i]), inputs[i + 1].lower()
@@ -37,6 +41,7 @@ def separate_items():
             cur_value = key_materials[material]
 
             if cur_value >= possible_items[material]:
+                key_materials[material] -= possible_items[material]
                 print(f"{legendary_items[material]} obtained!")
                 return key_materials, junk
         else:
@@ -44,3 +49,11 @@ def separate_items():
 
 
 main_materials, junk_materials = separate_items()
+
+main_materials = dict(sorted(main_materials.items(), key=lambda kvp: (-kvp[1], kvp[1])))
+junk_materials = dict(sorted(junk_materials.items(), key=lambda kvp: kvp[0]))
+
+output = {**main_materials, **junk_materials}
+
+for item, quantity in output.items():
+    print(f"{item}: {quantity}")
