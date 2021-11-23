@@ -1,4 +1,4 @@
-from project.product import Product
+from project import Product
 from typing import List
 
 
