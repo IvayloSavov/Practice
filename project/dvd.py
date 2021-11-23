@@ -3,9 +3,17 @@ class DVD:
         self.name = name
         self.id = id
         self.creation_year = int(creation_year)
-        self.creation_month = self.month_number(str(creation_month))
+        self.creation_month = creation_month if type(creation_month) == str else self.month_number(str(creation_month))
         self.age_restriction = age_restriction
         self.is_rented = False
+
+    # @property
+    # def (self):
+    #     return
+    #
+    # @.setter
+    # def (self, value):
+    #     pass
 
     @staticmethod
     def month_number(month: str):
@@ -30,7 +38,7 @@ class DVD:
     @classmethod
     def from_date(cls, id, name, date: str, age_restriction):
         day, month, year = date.split(".")
-        return cls(name, id, year, month, age_restriction)
+        return cls(name, id, int(year), int(month), age_restriction)
 
     def __repr__(self):
         return f"{self.id}: {self.name} ({self.creation_month} {self.creation_year}) has age restriction " \
