@@ -47,10 +47,10 @@ class Pizza:
         self.__toppings_capacity = value
 
     def add_topping(self, topping: Topping):
-        if len(self.toppings) == self.__toppings_capacity:
-            raise ValueError("Not enough space for another topping")
         if topping.topping_type in self.toppings:
             self.toppings[topping.topping_type] += topping.weight
+        if len(self.toppings) == self.__toppings_capacity:
+            raise ValueError("Not enough space for another topping")
         else:
             self.toppings[topping.topping_type] = topping.weight
 
