@@ -43,3 +43,4 @@ if __name__ == "__main__":
     guild = Guild("UGT")
     print(guild.assign_player(player))
     print(guild.guild_info())
+    print("test")
