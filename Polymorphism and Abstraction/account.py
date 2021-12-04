@@ -60,7 +60,7 @@ print(acc.balance)
 print(len(acc))
 for transaction in acc:
     print(transaction)
-print(acc[1])
+# print(acc[1])
 print(list(reversed(acc)))
 acc2.add_transaction(10)
 acc2.add_transaction(60)
