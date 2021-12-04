@@ -36,6 +36,7 @@ class Group:
     def __str__(self):
         return f"Group {self.name} with members {', '.join([str(p) for p in self.people])}"
 
+
 if __name__ == "__main__":
     p0 = Person('Aliko', 'Dangote')
     p1 = Person('Bill', 'Gates')
