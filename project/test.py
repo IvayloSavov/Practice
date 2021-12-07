@@ -1,4 +1,5 @@
 from project.Tomcat import Tomcat
+from project.cat import Cat
 from project.dog import Dog
 
 # dog = Dog("Rocky", 3, "Male")
@@ -7,3 +8,11 @@ from project.dog import Dog
 # tomcat = Tomcat("Tom", 6)
 # print(tomcat.make_sound())
 # print(tomcat)
+from project.kitten import Kitten
+
+kitten = Kitten("Kiki", 1)
+print(kitten.make_sound())
+print(kitten)
+cat = Cat("Johnny", 7, "Male")
+print(cat.make_sound())
+print(cat)
