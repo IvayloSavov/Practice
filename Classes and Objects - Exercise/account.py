@@ -14,6 +14,6 @@ class Account:
             return self.balance
         return "Amount exceeded balance"
 
-    def info(self):
+    def info(self) -> str:
         return f"User {self.name} with account {self.id} has {self.balance} balance"
 
