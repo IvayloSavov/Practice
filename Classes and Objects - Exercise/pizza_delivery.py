@@ -7,7 +7,7 @@ class PizzaDelivery:
         self.ingredients = ingredients
         self.ordered = False
 
-    def add_extra(self, ingredient, quantity, price_per_quantity):
+    def add_extra(self, ingredient, quantity, price_per_quantity) -> str or None:
         if self.ordered is True:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
         if ingredient not in self.ingredients:
@@ -15,7 +15,7 @@ class PizzaDelivery:
         self.ingredients[ingredient] += quantity
         self.price += quantity * price_per_quantity
 
-    def remove_ingredient(self, ingredient, quantity, price_per_quantity):
+    def remove_ingredient(self, ingredient, quantity, price_per_quantity) -> str:
         if self.ordered is True:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
         if ingredient not in self.ingredients:
@@ -26,7 +26,7 @@ class PizzaDelivery:
         self.ingredients[ingredient] -= quantity
         self.price -= quantity * price_per_quantity
 
-    def make_order(self):
+    def make_order(self) -> str:
         if self.ordered is True:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
         self.ordered = True
