@@ -40,8 +40,7 @@
 #
 # closestNumbers([4, 4, -2, -1, 3])
 
-.
-What is the output of the below code?
+
 
 class X:
     def __init__(self):
@@ -50,6 +49,8 @@ class X:
 
     def display_values(self):
         print(self.__num1, self.num2)
+
+
 class Y(X):
     def __init__(self):
         super().__init__()
